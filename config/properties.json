@@ -1,0 +1,4 @@
+{
+  "apiServerUrl" : "http://env.override.required",
+  "MOTD-82" : "changes for the story"
+}

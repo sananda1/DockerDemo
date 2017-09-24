@@ -1,0 +1,1 @@
+Placeholder so that Git creates the logs directory so that Node will start properly.
