@@ -7,7 +7,10 @@ def ecr_repo ="${ecr_repo}";
 
 stage 'Checkout'
     checkout poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '457a670b-4706-4912-8639-f80446cbb39e', url: 'https://github.com/sananda1/DockerDemo.git']]]
-
+stage 'Unit Testing'
+    
+stage 'Code Analysis'
+    
 stage 'build docker image'
     sh 'docker build -t site .'
     
