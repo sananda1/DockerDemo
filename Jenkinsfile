@@ -20,6 +20,7 @@ stage 'Tag and push the docker image to ECR'
 stage 'Pull the docker image to docker agent'
 sh '''
             sudo ssh -oStrictHostKeyChecking=no -i /home/jenkins/.ssh/atb-rotation.pem ubuntu@172.31.50.169 "docker pull ${ecr_repo}:${environment};
+            docker rm -f $(docker ps -a | grep ${ecr_repo}:${environment})
             "'''
           
 stage 'Run/Deploy the docker container'
