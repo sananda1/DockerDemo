@@ -1,7 +1,7 @@
 
 node('ubuntu-slave-1') {
 
-
+stage 'checks'
 def statusfilename='deployment.properties'
 def deployment_job_properties = readProperties file:statusfilename
 def status=deployment_job_properties.STATUS;
