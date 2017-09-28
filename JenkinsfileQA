@@ -1,1 +1,8 @@
 
+node('ubuntu-slave-1') {
+
+def statusfilename='deployment.properties'
+def status=statusfilename.STATUS;
+println status;
+
+}
